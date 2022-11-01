@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/ChipHvzvrd/README_gen#readme",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^6.5.2"
   }
 }

@@ -1,5 +1,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
+const licenses = ['None', 'MIT', 'BSD', 'GPL', 'Apache']
 
 const questions = [
     {
@@ -74,3 +76,22 @@ const questions = [
         message: "What is a good email to reach you for future projects?"
     },
 ];
+
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("~~~Files written to README~~~")
+    });
+};
+
+function init() {
+    inquirer.prompt(questions)
+    .then(function(userInput) {
+        console.log(userInput)
+        writeToFile("README.md", generateMarkdown(userInput));
+    });
+};
+
+init();
