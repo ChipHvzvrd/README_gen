@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ChipHvzvrd/README_gen/issues"
   },
-  "homepage": "https://github.com/ChipHvzvrd/README_gen#readme"
+  "homepage": "https://github.com/ChipHvzvrd/README_gen#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
 }
